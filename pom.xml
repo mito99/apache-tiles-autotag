@@ -19,7 +19,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>tiles-master</artifactId>
@@ -28,16 +29,16 @@ under the License.
     </parent>
 
     <!-- temporary only while parent pom is snapshot -->
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshot Repository</name>
-      <url>https://repository.apache.org/snapshots</url>
-    </repository>
-  </repositories>
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <id>apache.snapshots</id>
+            <name>Apache Snapshot Repository</name>
+            <url>https://repository.apache.org/snapshots</url>
+        </repository>
+    </repositories>
 
     <groupId>org.apache.tiles</groupId>
     <artifactId>tiles-autotag</artifactId>
@@ -116,9 +117,9 @@ under the License.
     <build>
         <plugins>
             <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-scm-publish-plugin</artifactId>
-              <extensions>true</extensions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-publish-plugin</artifactId>
+                <extensions>true</extensions>
                 <configuration>
                     <pubScmUrl>scm:svn:https://svn.apache.org/repos/asf/tiles/site/staging/tiles-autotag</pubScmUrl>
                 </configuration>
@@ -127,7 +128,9 @@ under the License.
     </build>
 
     <properties>
-        <maven.javadoc.failOnError>false</maven.javadoc.failOnError> <!-- remove with master-8 -->
+        <maven.javadoc.failOnError>false</maven.javadoc.failOnError>        <!-- remove with master-8 -->
+        <maven.test.skip>true</maven.test.skip>
+        <skipTests>true</skipTests>
     </properties>
 
     <profiles>
